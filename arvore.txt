@@ -1,1 +1,15 @@
-
+I|Região 1
+I|Região 3
+I|Região 7
+L|Setor 1
+L|Setor 2
+I|Região 6
+L|Setor 3
+L|Setor 4
+I|Região 2
+I|Região 5
+L|Setor 5
+L|Setor 6
+I|Região 4
+L|Setor 7
+L|Setor 8

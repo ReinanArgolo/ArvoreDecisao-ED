@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build",
+  "command": "/usr/bin/gcc  -I\"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/include\" -g -std=gnu11 -o CMakeFiles/jogo.dir/src/main.c.o -c \"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/main.c\"",
+  "file": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/main.c",
+  "output": "CMakeFiles/jogo.dir/src/main.c.o"
+},
+{
+  "directory": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build",
+  "command": "/usr/bin/gcc  -I\"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/include\" -g -std=gnu11 -o CMakeFiles/jogo.dir/src/tree.c.o -c \"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/tree.c\"",
+  "file": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/tree.c",
+  "output": "CMakeFiles/jogo.dir/src/tree.c.o"
+},
+{
+  "directory": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build",
+  "command": "/usr/bin/gcc  -I\"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/include\" -g -std=gnu11 -o CMakeFiles/jogo.dir/src/game.c.o -c \"/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/game.c\"",
+  "file": "/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/src/game.c",
+  "output": "CMakeFiles/jogo.dir/src/game.c.o"
+}
+]

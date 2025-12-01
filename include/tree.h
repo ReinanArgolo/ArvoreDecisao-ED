@@ -3,22 +3,26 @@
 
 #include <stdbool.h>
 
-// Basic binary tree node for decision tree
+typedef unsigned int uint;
+
+// Nó básico de árvore binária para territórios
 typedef struct Node {
-    char *question;            // Text to ask or final guess
-    struct Node *yes;          // Yes branch
-    struct Node *no;           // No branch
-    bool isLeaf;               // True if leaf (final guess)
+    uint id;                  // identificador simples do nó
+    char *territorioName;     // nome do território
+    struct Node *esq;         // filho esquerdo
+    struct Node *dir;         // filho direito
+    int estaOcupado;          // 0 = livre; >0 pode representar jogador
+    bool ehFolha;             // true se é folha (território final)
 } Node;
 
 // Create a leaf node (final guess)
 Node *tree_create_leaf(const char *text);
 
-// Create an internal question node with empty branches initially
-Node *tree_create_question(const char *question);
+// Create an internal territory node
+Node *tree_create_question(const char *territorioName);
 
-// Attach children to a question node
-void tree_set_children(Node *parent, Node *yesChild, Node *noChild);
+// Attach children (esquerda e direita)
+void tree_set_children(Node *parent, Node *esq, Node *dir);
 
 // Utility: is node a leaf?
 bool tree_is_leaf(const Node *n);
@@ -29,5 +33,11 @@ void tree_free(Node *root);
 // Optional: serialize/deserialize to file for persistence
 bool tree_save_to_file(const char *path, const Node *root);
 Node *tree_load_from_file(const char *path);
+
+// Constrói uma árvore inicial com exatamente 15 nós (7 internos, 8 folhas)
+Node *tree_build_initial_15(void);
+
+// Conta número de nós
+unsigned int tree_count_nodes(const Node *root);
 
 #endif // TREE_H

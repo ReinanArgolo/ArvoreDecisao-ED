@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/jogo.dir/src/main.c.o CMakeFiles/jogo.dir/src/tree.c.o CMakeFiles/jogo.dir/src/game.c.o -o jogo

@@ -1,0 +1,3 @@
+/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build/CMakeFiles/jogo.dir
+/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build/CMakeFiles/edit_cache.dir
+/home/reinanlinux/Documentos/UESC/Semestre III/ED/ArvoreDecisao-ED/build/CMakeFiles/rebuild_cache.dir
