@@ -20,6 +20,6 @@ typedef struct Player {
 
 Player* criar_jogador(int id, char *nome, Territorio *pos_inicial);
 void destruir_jogador(Player *p);
-void imprimir_status(Player *p);
+void imprimir_status(Player *p, int producao_farms);
 
 #endif

@@ -9,6 +9,7 @@ SRCS = $(SRC_DIR)/main.c \
        $(SRC_DIR)/jogador.c \
        $(SRC_DIR)/jogo.c \
        $(SRC_DIR)/utils.c \
+       $(SRC_DIR)/ui.c \
        $(TADS_DIR)/lista.c \
        $(TADS_DIR)/pilha.c \
        $(TADS_DIR)/fila.c

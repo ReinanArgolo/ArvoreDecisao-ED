@@ -38,11 +38,12 @@ void destruir_jogador(Player *p) {
     free(p);
 }
 
-void imprimir_status(Player *p) {
+void imprimir_status(Player *p, int producao_farms) {
     printf("\n=== Status de %s (P%d) ===\n", p->nome, p->id);
     printf("Posicao: %s (Nivel %d)\n", p->pos->nome, p->pos->nivel);
     printf("Vitalidade: %d | XP: %d\n", p->V, p->Xp);
     printf("Atk: %d | Def: %d\n", p->Aatk, p->Adef);
+    printf("Producao de Farms: +%d XP/turno\n", producao_farms);
     printf("Inventario: ");
     listar_itens(&p->inv);
     printf("\n==========================\n");
