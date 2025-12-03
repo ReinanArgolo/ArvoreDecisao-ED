@@ -1,24 +1,28 @@
-# Simple cross-platform Makefile (expects GCC/Clang)
+CC = gcc
+CFLAGS = -Wall -Wextra -I./src
+SRC_DIR = src
+TADS_DIR = src/tads
+OBJ_DIR = obj
 
-CC ?= gcc
-CFLAGS ?= -std=c11 -O2 -Wall -Wextra
+SRCS = $(SRC_DIR)/main.c \
+       $(SRC_DIR)/arvore.c \
+       $(SRC_DIR)/jogador.c \
+       $(SRC_DIR)/jogo.c \
+       $(SRC_DIR)/utils.c \
+       $(TADS_DIR)/lista.c \
+       $(TADS_DIR)/pilha.c \
+       $(TADS_DIR)/fila.c
 
-SRC := src/main.c src/tree.c src/game.c
-INC := -Iinclude
-OUT := bin/jogo
+OBJS = $(SRCS:.c=.o)
+EXEC = codebattle
 
-OS := $(shell uname 2>/dev/null || echo Windows)
-ifeq ($(OS),Windows)
-	OUT := bin/jogo.exe
-endif
+all: $(EXEC)
 
-$(OUT): $(SRC)
-	@mkdir -p bin
-	$(CC) $(CFLAGS) $(INC) $(SRC) -o $(OUT)
+$(EXEC): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
 
-.PHONY: clean run
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	$(RM) -r bin
-
-run: $(OUT)
-	./$(OUT)
+	rm -f $(SRC_DIR)/*.o $(TADS_DIR)/*.o $(EXEC)
