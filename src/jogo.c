@@ -364,38 +364,16 @@ void game_loop(Territorio *raiz, Player *p1, Player *p2, int modo_demo) {
 
             int escolha = 0;
 
-            if (modo_demo) {
-                // Heurística simples para o modo demo
-                Territorio *pai = buscar_pai(raiz, atual->pos);
-                if (pai != NULL && atual->Xp >= pai->nivel_minimo) {
-                    escolha = 1; // Tentar subir
-                } else if (atual->pos->tipo == RECURSO && !atual->pos->visitado) {
-                    escolha = 2; // Coletar recurso
-                } else {
-                    if (atual->V < 5 && consumir_item(&atual->inv, ENERGIA)) {
-                        escolha = 3;
-                    } else {
-                        if (rng_int(0, 1) == 0) escolha = 5;
-                        else escolha = 6;
-                    }
-                }
-                if (escolha == 0) escolha = rng_int(1, 6);
-                
-                sprintf(log_msg, "Demo escolheu: %d", escolha);
-                // Delay para demo
-                // Sleep(1000); 
-            } else {
-                printf(" [ ACOES DISPONIVEIS ]\n");
-                printf(" [1] Subir (Pai) [2] Explorar    [3] Usar Item   [4] Passar Vez\n");
-                printf(" [5] Mover Esq   [6] Mover Dir   [7] Build Farm  [8] Loja\n");
-                printf(" [9] Descer\n");
-                printf(" ESCOLHA > ");
+            printf(" [ ACOES DISPONIVEIS ]\n");
+            printf(" [1] Subir (Pai) [2] Explorar    [3] Usar Item   [4] Passar Vez\n");
+            printf(" [5] Mover Esq   [6] Mover Dir   [7] Build Farm  [8] Loja\n");
+            printf(" [9] Descer\n");
+            printf(" ESCOLHA > ");
 
-                if (scanf("%d", &escolha) != 1) {
-                    limpar_buffer();
-                    escolha = 4;
-                }
-            }
+            if (scanf("%d", &escolha) != 1) {
+                limpar_buffer();
+                escolha = 4;
+    
 
             switch(escolha) {
                 case 1:

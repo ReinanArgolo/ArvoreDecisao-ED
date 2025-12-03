@@ -42,7 +42,7 @@ void print_node_ui(Territorio *t, Player *p1, Player *p2, Player *atual) {
     // Se o nó estiver ocupado pelo dono da farm, tudo é azul/vermelho.
     // Se o nó estiver livre (mas com farm?), ou ocupado por outro (conflito?), a cor do $ deve prevalecer.
     // Nota: Pela lógica do jogo, se tem farm, o nó deve ser do dono ou foi recém tomado?
-    // Assumindo que a farm persiste, vamos forçar a cor do extra.
+    // Assumindo que a farm persiste, forçar a cor do extra.
 
     if (is_here) {
         printf("%s[%02d%s%c%s]<%s", cor, t->id, cor_extra, extra, cor, RST);
@@ -85,9 +85,9 @@ void desenhar_interface(Territorio *raiz, Player *p1, Player *p2, Player *atual,
     printf("                                     ");
     print_node_ui(nodes[1], p1, p2, atual);
     printf("\n");
-    printf("                                    /      \\\n");
-    printf("                          _________/        \\_________\n");
-    printf("                         /                          \\\n");
+    printf("                                    /      \\\\\n");
+    printf("                          _________/        \\\\_________\n");
+    printf("                         /                         \\\\\n");
 
     // Nível 1
     printf("                    ");
@@ -95,7 +95,7 @@ void desenhar_interface(Territorio *raiz, Player *p1, Player *p2, Player *atual,
     printf("                        ");
     print_node_ui(nodes[3], p1, p2, atual);
     printf("\n");
-    printf("                     /     \\                      /     \\\n");
+    printf("                     /     \\                      /     \\\\\n");
 
     // Nível 2
     printf("              ");
@@ -107,7 +107,7 @@ void desenhar_interface(Territorio *raiz, Player *p1, Player *p2, Player *atual,
     printf("      ");
     print_node_ui(nodes[7], p1, p2, atual);
     printf("\n");
-    printf("             /   \\     /   \\                /   \\     /   \\\n");
+    printf("             /   \\     /   \\                /   \\     /   \\\\\n");
 
     // Nível 3
     printf("           ");
