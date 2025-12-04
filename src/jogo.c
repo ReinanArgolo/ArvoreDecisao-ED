@@ -480,4 +480,5 @@ void game_loop(Territorio *raiz, Player *p1, Player *p2, int modo_demo) {
     }
 
     liberar_fila(&fila_turnos);
+    }
 }

@@ -85,17 +85,17 @@ void desenhar_interface(Territorio *raiz, Player *p1, Player *p2, Player *atual,
     printf("                                     ");
     print_node_ui(nodes[1], p1, p2, atual);
     printf("\n");
-    printf("                                    /      \\\\\n");
-    printf("                          _________/        \\\\_________\n");
-    printf("                         /                         \\\\\n");
+    printf("                                    /     \\\n");
+    printf("                          _________/       \\_________\n");
+    printf("                         /                           \\\n");
 
     // Nível 1
-    printf("                    ");
+    printf("                     ");
     print_node_ui(nodes[2], p1, p2, atual);
-    printf("                        ");
+    printf("                           ");
     print_node_ui(nodes[3], p1, p2, atual);
     printf("\n");
-    printf("                     /     \\                      /     \\\\\n");
+    printf("                  /        \\                        /      \\\n");
 
     // Nível 2
     printf("              ");
@@ -107,17 +107,19 @@ void desenhar_interface(Territorio *raiz, Player *p1, Player *p2, Player *atual,
     printf("      ");
     print_node_ui(nodes[7], p1, p2, atual);
     printf("\n");
-    printf("             /   \\     /   \\                /   \\     /   \\\\\n");
+    printf("             /   \\     /      \\               /    \\        /    \\\n");
 
     // Nível 3
-    printf("           ");
+    printf("          ");
     print_node_ui(nodes[8], p1, p2, atual);
+    printf("  ");
     print_node_ui(nodes[9], p1, p2, atual);
     print_node_ui(nodes[10], p1, p2, atual);
     print_node_ui(nodes[11], p1, p2, atual);
-    printf("          ");
+    printf("        ");
     print_node_ui(nodes[12], p1, p2, atual);
     print_node_ui(nodes[13], p1, p2, atual);
+    printf("  ");
     print_node_ui(nodes[14], p1, p2, atual);
     print_node_ui(nodes[15], p1, p2, atual);
     printf("\n\n");
